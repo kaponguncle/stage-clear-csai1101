@@ -17,7 +17,7 @@ techNoDict = {
 }
 
 # หน้าตาแสดงผล
-print("***ยินดีต้อนรับเข้าสู่ร้าน TechNo Shopping***")
+print("\n***ยินดีต้อนรับเข้าสู่ร้าน TechNo Shopping***")
 for product in techNoDict:
     print(" {} ------- {} บาท".format(product, techNoDict[product]))
 print("*************************************")
@@ -30,29 +30,30 @@ try:
         pricePerUnit = techNoDict[selectMenu]
         price = pricePerUnit * amountSelected
         discouted = discouter(price)
-        sumary = price-discouted
+        summary = price-discouted
     elif selectMenu == "laptop":
         pricePerUnit = techNoDict[selectMenu]
         price = pricePerUnit * amountSelected
         discouted = discouter(price)
-        sumary = price-discouted
+        summary = price-discouted
     elif selectMenu == "smartphone":
         pricePerUnit = techNoDict[selectMenu]
         price = pricePerUnit * amountSelected
         discouted = discouter(price)
-        sumary = price-discouted
+        summary = price-discouted
     elif selectMenu == "printer":
         pricePerUnit = techNoDict[selectMenu]
         price = pricePerUnit * amountSelected
         discouted = discouter(price)
-        sumary = price-discouted
+        summary = price-discouted
     else:
         pricePerUnit = techNoDict[selectMenu]
         price = pricePerUnit * amountSelected
         discouted = discouter(price)
-        sumary = price-discouted
-    print("\n******สรุปรายการคำสั่งซื้อ******")
-    print(f"สินค้าที่ซื้อ: {selectMenu}, {pricePerUnit} x {amountSelected}\nราคาก่อนได้รับส่วนลด: {price} บาท\nส่วนลดในการซื้อ: {round(discouted, 2)} บาท\nราคาที่ต้องชำระ: {sumary} บาท")
+        summary = price-discouted
+    print("\n***********สรุปรายการคำสั่งซื้อ***********")
+    print(f"สินค้าที่ซื้อ: {selectMenu}, {pricePerUnit} x {amountSelected}\nราคาก่อนได้รับส่วนลด: {price} บาท\nส่วนลดในการซื้อ: {round(discouted, 2)} บาท\nราคาที่ต้องชำระ: {summary} บาท")
+    print("*************************************")
 except IndexError:
     print("โปรแกรมหยุดการทำงาน!! ไม่พบรายการที่คุณป้อนเข้าไป ¯\_(ツ)_/¯")
     exit()
