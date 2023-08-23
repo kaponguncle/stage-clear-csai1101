@@ -1,3 +1,8 @@
+# ฟังค์ชั่น
+def amouter(pricePerUnit, amoutAll):
+    notDiscount = float(pricePerUnit) * int(amoutAll)
+    return round(notDiscount, 2)
+
 def discouter(price):
     if price >= 10000:
         discout = price*10/100
@@ -28,27 +33,27 @@ try:
     print("*************************************")
     if selectMenu == "pc":
         pricePerUnit = techNoDict[selectMenu]
-        price = pricePerUnit * amountSelected
+        price = amouter(pricePerUnit, amountSelected)
         discouted = discouter(price)
         summary = price-discouted
     elif selectMenu == "laptop":
         pricePerUnit = techNoDict[selectMenu]
-        price = pricePerUnit * amountSelected
+        price = amouter(pricePerUnit, amountSelected)
         discouted = discouter(price)
         summary = price-discouted
     elif selectMenu == "smartphone":
         pricePerUnit = techNoDict[selectMenu]
-        price = pricePerUnit * amountSelected
+        price = amouter(pricePerUnit, amountSelected)
         discouted = discouter(price)
         summary = price-discouted
     elif selectMenu == "printer":
         pricePerUnit = techNoDict[selectMenu]
-        price = pricePerUnit * amountSelected
+        price = amouter(pricePerUnit, amountSelected)
         discouted = discouter(price)
         summary = price-discouted
     else:
         pricePerUnit = techNoDict[selectMenu]
-        price = pricePerUnit * amountSelected
+        price = amouter(pricePerUnit, amountSelected)
         discouted = discouter(price)
         summary = price-discouted
     print("\n***********สรุปรายการคำสั่งขาย***********")
