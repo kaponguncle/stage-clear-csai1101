@@ -24,7 +24,7 @@ print("*************************************")
 
 try:
     selectMenu = str(input("กรุณาพิมพ์รายการที่ต้องการขาย: "))
-    amountSelected = int(input("กรุณาใส่จำนวนสินค้าที่ซื้อ: "))
+    amountSelected = int(input("กรุณาใส่จำนวนสินค้าที่ขาย: "))
     print("*************************************")
     if selectMenu == "pc":
         pricePerUnit = techNoDict[selectMenu]
@@ -51,8 +51,8 @@ try:
         price = pricePerUnit * amountSelected
         discouted = discouter(price)
         summary = price-discouted
-    print("\n***********สรุปรายการคำสั่งซื้อ***********")
-    print(f"สินค้าที่ซื้อ: {selectMenu}, {pricePerUnit} x {amountSelected}\nราคาก่อนได้รับส่วนลด: {price} บาท\nส่วนลดในการซื้อ: {round(discouted, 2)} บาท\nราคาที่ต้องชำระ: {summary} บาท")
+    print("\n***********สรุปรายการคำสั่งขาย***********")
+    print(f"สินค้าที่ขาย: {selectMenu}, {pricePerUnit} x {amountSelected}\nราคาก่อนได้รับส่วนลด: {price} บาท\nส่วนลดในการขาย: {round(discouted, 2)} บาท\nราคาที่ต้องชำระ: {summary} บาท")
     print("*************************************")
 except IndexError:
     print("โปรแกรมหยุดการทำงาน!! ไม่พบรายการที่คุณป้อนเข้าไป ¯\_(ツ)_/¯")
